@@ -1,0 +1,10 @@
+create or replace procedure trans_opr
+(user user_details.username%type,fine number,aid number)
+is
+borrow borrower%rowtype;
+begin
+select * into borrow from borrower where username=user and asset_id=aid;
+insert into transactions values(borrow.username,borrow.asset_id,borrow.asset_name,borrow.asset_type,borrow.issue_date,borrow.returning_date,sysdate,fine);
+commit;
+end;
+/

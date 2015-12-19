@@ -1,0 +1,28 @@
+reminder queue
+---------------
+JMSServer-1
+
+jms module- jms2
+
+
+ConnectionFactory-1   jndi name= connectionFactory1
+
+
+Queue-1  jndi name= RemQ  targets= JMSServer-1
+
+
+
+-----------------------------------------------------------
+------------------------------------------------------------
+
+reservation queue
+-----------------
+JMSServer-0
+
+jms module- jms1
+
+
+ConnectionFactory-0   jndi name= connectionFactory
+
+
+Queue-0  jndi name= TestQ  targets= JMSServer-0

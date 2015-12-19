@@ -1,0 +1,15 @@
+create or replace procedure due_opr
+(user user_details.username%type)
+is
+cursor curcur is
+select returning_date from borrower where username=user;
+begin
+for rec in curcur
+loop
+if rec.returning_date<sysdate then
+	update user_details set blocked='true' where username=user;
+end if;
+end loop;
+
+end;
+/

@@ -1,0 +1,42 @@
+SQL> desc assets;
+ Name                                                                                                              Null?    Type
+ ---------------------------------------------------------------------------------------------------
+ ASSET_ID                                                                                                                   NUMBER
+ ASSET_NAME                                                                                                                 VARCHAR2(50)
+ ASSET_DESC                                                                                                                 VARCHAR2(50)
+ ASSET_TYPE                                                                                                                 VARCHAR2(20)
+ ISSUED                                                                                                                     VARCHAR2(10)
+ RESERVED                                                                                                                   VARCHAR2(20)
+
+
+
+SQL> desc user_details;
+ Name                                                                                                              Null?    Type
+ ---------------------------------------------------------------------------------------------------
+ USERNAME                                                                                                                   VARCHAR2(50)
+ PASSWORD                                                                                                                   VARCHAR2(50)
+ USERTYPE                                                                                                                   VARCHAR2(20)
+ BLOCKED
+
+SQL> desc borrower;
+ Name                                                                                                              Null?    Type
+ ---------------------------------------------------------------------------------------------------
+ USERNAME                                                                                                                   VARCHAR2(50)
+ ASSET_ID                                                                                                                   NUMBER
+ ASSET_NAME                                                                                                                 VARCHAR2(50)
+ ASSET_TYPE                                                                                                                 VARCHAR2(20)
+ ISSUE_DATE                                                                                                                 DATE
+ RETURNING_DATE                                                                                                             DATE
+
+
+SQL> desc transactions;
+ Name                                                                                                              Null?    Type
+ ---------------------------------------------------------------------------------------------------
+ USERNAME                                                                                                                   VARCHAR2(50)
+ ASSET_ID                                                                                                                   NUMBER
+ ASSET_NAME                                                                                                                 VARCHAR2(50)
+ ASSET_TYPE                                                                                                                 VARCHAR2(20)
+ ISSUE_DATE                                                                                                                 DATE
+ RETURNING_DATE                                                                                                             DATE
+ RETURNED_DATE                                                                                                              DATE
+ FINE                                                                                                                       NUMBER
